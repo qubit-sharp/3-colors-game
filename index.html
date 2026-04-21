@@ -98,7 +98,7 @@
         let regionColors = [];
         let selectedColor = 1;
 
-        // --- ВАШ АЛГОРИТМ ПРОВЕРКИ ИЗ ПРЕДЫДУЩЕГО ОТВЕТА ---
+        //АЛГОРИТМ ПРОВЕРКИ
         function isSafe(v, graph, colors, c) {
             for (let i = 0; i < graph.length; i++) {
                 if (graph[v][i] === 1 && c === colors[i]) return false;
@@ -175,7 +175,7 @@ colors[v] = 0;
 
         function generateRegions() {
             // Случайное число стран от 8 до 15
-            regionsCount = Math.floor(Math.random() * 8) + 8;
+            regionsCount = Math.floor(Math.random() * 20) + 15;
             
             // Инициализация пустой сетки
             grid = Array(GRID_SIZE).fill().map(() => Array(GRID_SIZE).fill(-1));
